@@ -18,7 +18,8 @@ import Nav from './components/Nav';
 import Landing from "./components/layout/Landing";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
-
+import ShowExercises from './components/ShowExercises';
+import EditWorkout from './components/EditWorkout';
 //add login&register components
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
@@ -51,12 +52,15 @@ function App() {
             <Switch>
               {/* <Route path="/" exact component={Home} />     */}
               <Route path="/" exact component={Landing} />                     
-              <Route path="/exercises" exact component={AddExercise} />                         
+              <Route path="/exercises" exact component={AddExercise} />
+              <Route path="/showexercises" exact component={ShowExercises} />                         
               <Route path="/showworkouts" exact component={ShowWorkouts} />                    
               <Route path="/createworkout" exact component={CreateWorkout} />   
+              <Route path="/editworkout/:id" exact component={EditWorkout} />
               {/* add login&register components */}
               <Route path="/login" exact component={Login} />
               <Route path="/register" exact component={Register} />
+              
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>     
         </div>
