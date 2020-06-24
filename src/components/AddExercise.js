@@ -1,8 +1,5 @@
 
 import React from 'react';
-import Form from 'react-bootstrap/Form';
-
-
 
 class addExercises extends React.Component {
     constructor(props) {
@@ -34,18 +31,20 @@ class addExercises extends React.Component {
           
         })
       });
-      console.log(result);
+      // console.log(result);
       
-      this.setState({title: ''});     
+      this.setState({title: ''});
+      // alert("Exercise added");
+      window.location.href = "/createworkout";
       
     }
   
     render() {
       return (       
         
-        <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit}>
           <label for="name" >Enter name of the exercise: </label>
-          <input  id="name" type="text" value={this.state.title} onChange={this.handleChangeTitle} />
+          <input  id="name" type="text" value={this.state.title} onChange={this.handleChangeTitle} required />
           <input className="btn btn-primary" type="submit" value="Submit" />
         </form> 
         

@@ -40,7 +40,7 @@ class CreateWorkout extends React.Component {
     }
 
     async handleSubmit(event) {
-      alert('An exercise was submitted: ' + this.state.title);
+      // alert('An exercise was submitted: ' + this.state.title);
       event.preventDefault();
        await fetch('http://localhost:5000/workouts', {
         method: 'post',
@@ -57,7 +57,8 @@ class CreateWorkout extends React.Component {
       });
 
       this.setState({title: ''});     
-      this.setState({length: ''});    
+      this.setState({length: ''});  
+      window.location.href = "/showworkouts";  
       
     }
     
@@ -72,7 +73,7 @@ class CreateWorkout extends React.Component {
               ))}
             </select> 
           <label>Duration</label>
-            <input type="text" value={this.state.length} onChange={this.handleChangeLength} />
+            <input type="text" value={this.state.length} onChange={this.handleChangeLength} required />
           <input className="btn btn-primary" type="submit" value="Submit" />
         </form>        
 
