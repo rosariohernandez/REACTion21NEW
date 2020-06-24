@@ -1,8 +1,13 @@
 
 import React from 'react';
-// import ListExercises from './ListExercise';
-// import ListExercises from '../components/ListExercise';
+import jwt_decode from "jwt-decode";
 
+
+var b = localStorage.getItem("jwtToken");
+console.log(b);
+const decoded = jwt_decode(b);
+console.log(decoded);
+console.log(decoded.name);
 
 class CreateWorkout extends React.Component {
     constructor(props) {
@@ -52,7 +57,7 @@ class CreateWorkout extends React.Component {
         body: JSON.stringify({
             "title": this.state.title,
             "length": this.state.length,
-            "user": "Vitaliy"          
+            "user": decoded.name          
         })
       });
 

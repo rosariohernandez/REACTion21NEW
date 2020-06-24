@@ -18,6 +18,9 @@ function Nav() {
         <Link style={navStyle} to="/exercises">
            <li>Add Exercise</li>
         </Link>
+        <Link style={navStyle} to="/showexercises">
+           <li>Manage Exercises</li>
+        </Link>
         <Link style={navStyle} to="/createworkout">
            <li>Enter Workout</li>
         </Link>    
