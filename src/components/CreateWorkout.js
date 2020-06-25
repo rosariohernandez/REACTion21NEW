@@ -3,6 +3,7 @@ import React from 'react';
 import jwt_decode from "jwt-decode";
 
 
+
 var name="";
 
 if(localStorage.getItem("jwtToken") != null){
@@ -12,7 +13,7 @@ const decoded = jwt_decode(b);
 name = decoded.name;
 // console.log(name);
 }else{
-  name="No User";
+  name="No User";  
 }
 
 
@@ -34,6 +35,9 @@ class CreateWorkout extends React.Component {
         .then(response => response.json())
         .then(data => this.setState({ data }));
         
+        if(localStorage.getItem("jwtToken") == null){
+          window.location.replace("/login");
+        }
     }
 
     // handleChangeTitle(event) {
@@ -50,7 +54,7 @@ class CreateWorkout extends React.Component {
       console.log(event.target.value);
       this.setState({title: event.target.value}); 
     }
-
+    
     async handleSubmit(event) {
       // alert('An exercise was submitted: ' + this.state.title);
       event.preventDefault();
