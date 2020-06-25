@@ -10,3 +10,5 @@
   -npm install  | to install all packages
   
   -npm run dev | to start back and front end
+
+![welcome](public/welcome.png)
