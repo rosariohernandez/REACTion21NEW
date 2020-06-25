@@ -31,13 +31,15 @@ class CreateWorkout extends React.Component {
     }
     
     async componentDidMount() {
+
+        if(localStorage.getItem("jwtToken") == null){
+          window.location.replace("/login");
+        }
       await fetch('http://localhost:5000/exercises')
         .then(response => response.json())
         .then(data => this.setState({ data }));
         
-        if(localStorage.getItem("jwtToken") == null){
-          window.location.replace("/login");
-        }
+
     }
 
     // handleChangeTitle(event) {

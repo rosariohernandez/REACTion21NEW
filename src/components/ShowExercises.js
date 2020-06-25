@@ -23,6 +23,10 @@ async function handleDelete(event){
     }  
 }
     const fetchItems = async ()=>{
+
+      if(localStorage.getItem("jwtToken") == null){
+        window.location.replace("/login");
+      }
         const data = await fetch('http://localhost:5000/exercises');
         const exercises = await data.json();        
         setItems(exercises);
