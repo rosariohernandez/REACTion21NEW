@@ -16,6 +16,7 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 
 import AddExercise from './components/AddExercise';
 // import ListExercises from './components/ListExercise';
+import CreateProfile from './components/CreateProfile';
 import ShowWorkouts from './components/ShowWorkouts';
 import CreateWorkout from './components/CreateWorkout';
 import Nav from './components/Nav';
@@ -55,7 +56,8 @@ function App() {
             <Nav />          
             <Switch>
               {/* <Route path="/" exact component={Home} />     */}
-              <Route path="/" exact component={Landing} />                     
+              <Route path="/" exact component={Landing} />   
+              <Route path="/profiles" exact component={CreateProfile} />          
               <Route path="/exercises" exact component={AddExercise} />
               <Route path="/showexercises" exact component={ShowExercises} />                         
               <Route path="/showworkouts" exact component={ShowWorkouts} />                    
