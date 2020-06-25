@@ -45,14 +45,13 @@ class addExercises extends React.Component {
   
     render() {
       return (       
-        
+        <div className="custom-form">
           <form onSubmit={this.handleSubmit}>
-          <label for="name" >Enter name of the exercise: </label>
-          <input  id="name" type="text" value={this.state.title} onChange={this.handleChangeTitle} required />
-          <input className="btn btn-primary" type="submit" value="Submit" />
-        </form> 
-        
-
+            <label for="name" >Enter name of the exercise: </label>
+            <input  id="name" type="text" value={this.state.title} onChange={this.handleChangeTitle} required />
+            <input className="btn btn-primary" type="submit" value="Submit" />
+          </form> 
+        </div>
       );
     }
   }

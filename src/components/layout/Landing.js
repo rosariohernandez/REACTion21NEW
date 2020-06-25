@@ -4,20 +4,16 @@ import { Link } from "react-router-dom";
 class Landing extends Component {
   render() {
     return (
+      <div className="custom-form">
       <div style={{ height: "75vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="col s12 center-align">
-            <h4>
-              <b>Build</b> a login/auth app with the{" "}
-              <span style={{ fontFamily: "monospace" }}>MERN</span> stack from
-              scratch
-            </h4>
             <div>
-    <h1>Welcome to Reaction21</h1>
-    <p>Exercise tracker to keep track of time spent exercising</p>
-  </div>
+              <p className="slogan">Meet A Better You By Setting Up Your</p>
+              <p className="slogan">Sports Plan Today</p>
+            </div>
             <br />
-            <div className="col s6">
+            <div style={{margin:"2vw"}} className="container-login100-form-btn">
               <Link
                 to="/register"
                 style={{
@@ -25,12 +21,12 @@ class Landing extends Component {
                   borderRadius: "3px",
                   letterSpacing: "1.5px"
                 }}
-                className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                className="login100-form-btn"
               >
                 Register
               </Link>
             </div>
-            <div className="col s6">
+            <div style={{margin:"2vw"}} className="container-login100-form-btn">
               <Link
                 to="/login"
                 style={{
@@ -38,13 +34,14 @@ class Landing extends Component {
                   borderRadius: "3px",
                   letterSpacing: "1.5px"
                 }}
-                className="btn btn-large btn-flat waves-effect white black-text"
+                className="login100-form-btn"
               >
                 Log In
               </Link>
             </div>
           </div>
         </div>
+      </div>
       </div>
     );
   }

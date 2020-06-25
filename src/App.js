@@ -3,7 +3,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { render } from '@testing-library/react';
 import './App.css';
+//import stylesheets
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/main.css';
+import './css/util.css';
+
 import { Provider } from "react-redux";
 import store from "./store";
 import jwt_decode from "jwt-decode";

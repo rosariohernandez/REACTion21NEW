@@ -21,13 +21,14 @@ const [exercises, setItems] = useState([]);
 // }
   return (
     <div className="App">
-
-        {/* <select onChange={handleChange}> */}
-        <select >
-            {exercises.map(item =>(                
-                <option key={item._id} value={item.title} >{item.title}</option>                
-            ))}
-        </select>        
+        <div className="custom-form">
+            {/* <select onChange={handleChange}> */}
+            <select >
+                {exercises.map(item =>(                
+                    <option key={item._id} value={item.title} >{item.title}</option>                
+                ))}
+            </select>     
+        </div>   
     </div>
   );
 }

@@ -61,7 +61,7 @@ class EditWorkout extends React.Component {
     render() {
       
       return (       
-        
+        <div className="custom-form">
           <form onSubmit={this.handleSubmit}>
 
           <label>Workout</label>
@@ -70,7 +70,7 @@ class EditWorkout extends React.Component {
             <input type="text" value={this.state.length}  onChange={this.handleChangeLength} />
           <input className="btn btn-primary" type="submit" value="Submit" />
         </form>        
-
+      </div>
       );
     }
   }

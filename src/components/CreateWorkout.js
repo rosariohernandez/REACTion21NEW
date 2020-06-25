@@ -83,7 +83,7 @@ class CreateWorkout extends React.Component {
     render() {
       
       return (       
-        
+        <div className="custom-form">
           <form onSubmit={this.handleSubmit}>
             <select id="select" onChange={this.handleSelect}>
               {this.state.data.map(item =>(                
@@ -94,7 +94,7 @@ class CreateWorkout extends React.Component {
             <input type="text" value={this.state.length} onChange={this.handleChangeLength} required />
           <input className="btn btn-primary" type="submit" value="Submit" />
         </form>        
-
+      </div>
       );
     }
   }

@@ -53,23 +53,17 @@ class Register extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col s8 offset-s2">
-            <Link to="/" className="btn-flat waves-effect">
+      <div className="limiter">
+        <div className="container-login100">
+          <div className="wrap-login100">
+            {/* <Link to="/" className="btn-flat waves-effect">
               <i className="material-icons left">keyboard_backspace</i> Back to
               home
-            </Link>
-            <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-              <h4>
-                <b>Register</b> below
-              </h4>
-              <p className="grey-text text-darken-1">
-                Already have an account? <Link to="/login">Log in</Link>
-              </p>
-            </div>
-            <form noValidate onSubmit={this.onSubmit}>
-              <div className="input-field col s12">
+            </Link> */}
+
+            <form className="login100-form validate-form" noValidate onSubmit={this.onSubmit}>
+              <span className="login100-form-title p-b-43">Register below</span>
+              <div className="wrap-input100 validate-input">
                 <input
                   onChange={this.onChange}
                   value={this.state.name}
@@ -78,12 +72,12 @@ class Register extends Component {
                   type="text"
                   className={classnames("", {
                     invalid: errors.name
-                  })}
+                  })} className="input100"
                 />
-                <label htmlFor="name">Name</label>
+                <label className="label-input100" htmlFor="name">Name</label>
                 <span className="red-text">{errors.name}</span>
               </div>
-              <div className="input-field col s12">
+              <div className="wrap-input100 validate-input">
                 <input
                   onChange={this.onChange}
                   value={this.state.email}
@@ -92,12 +86,12 @@ class Register extends Component {
                   type="email"
                   className={classnames("", {
                     invalid: errors.email
-                  })}
+                  })} className="input100"
                 />
-                <label htmlFor="email">Email</label>
+                <label className="label-input100" htmlFor="email">Email</label>
                 <span className="red-text">{errors.email}</span>
               </div>
-              <div className="input-field col s12">
+              <div className="wrap-input100 validate-input">
                 <input
                   onChange={this.onChange}
                   value={this.state.password}
@@ -106,12 +100,12 @@ class Register extends Component {
                   type="password"
                   className={classnames("", {
                     invalid: errors.password
-                  })}
+                  })} className="input100"
                 />
-                <label htmlFor="password">Password</label>
+                <label className="label-input100" htmlFor="password">Password</label>
                 <span className="red-text">{errors.password}</span>
               </div>
-              <div className="input-field col s12">
+              <div className="wrap-input100 validate-input">
                 <input
                   onChange={this.onChange}
                   value={this.state.password2}
@@ -120,25 +114,26 @@ class Register extends Component {
                   type="password"
                   className={classnames("", {
                     invalid: errors.password2
-                  })}
+                  })} className="input100"
                 />
-                <label htmlFor="password2">Confirm Password</label>
+                <label className="label-input100" htmlFor="password2">Confirm Password</label>
                 <span className="red-text">{errors.password2}</span>
               </div>
-              <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+              <div className="container-login100-form-btn">
                 <button
-                  style={{
-                    width: "150px",
-                    borderRadius: "3px",
-                    letterSpacing: "1.5px",
-                    marginTop: "1rem"
-                  }}
                   type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                  className="login100-form-btn"
                 >
                   Sign up
                 </button>
               </div>
+
+            <div className="text-center p-t-46 p-b-20">
+              <p className="txt1">
+                Already have an account? <Link to="/login">Log in</Link>
+              </p>
+            </div>
+
             </form>
           </div>
         </div>
