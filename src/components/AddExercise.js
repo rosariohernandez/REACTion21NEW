@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 class addExercises extends React.Component {
@@ -19,7 +18,8 @@ class addExercises extends React.Component {
     async handleSubmit(event) {
       // alert('A name was submitted: ' + this.state.location);
       event.preventDefault();
-      let result = await fetch('http://localhost:5000/exercises', {
+      // let result = await fetch('http://localhost:5000/exercises', {
+      await fetch('http://localhost:5000/exercises', {
         method: 'post',
         // mode: 'no-cors',
         headers:{

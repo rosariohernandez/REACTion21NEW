@@ -11,7 +11,7 @@ import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 
 import AddExercise from './components/AddExercise';
-import ListExercises from './components/ListExercise';
+// import ListExercises from './components/ListExercise';
 import ShowWorkouts from './components/ShowWorkouts';
 import CreateWorkout from './components/CreateWorkout';
 import Nav from './components/Nav';

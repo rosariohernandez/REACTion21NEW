@@ -3,11 +3,18 @@ import React from 'react';
 import jwt_decode from "jwt-decode";
 
 
+var name="";
+
+if(localStorage.getItem("jwtToken") != null){
 var b = localStorage.getItem("jwtToken");
-console.log(b);
+// console.log(b);
 const decoded = jwt_decode(b);
-console.log(decoded);
-console.log(decoded.name);
+name = decoded.name;
+// console.log(name);
+}else{
+  name="No User";
+}
+
 
 class CreateWorkout extends React.Component {
     constructor(props) {
@@ -57,7 +64,7 @@ class CreateWorkout extends React.Component {
         body: JSON.stringify({
             "title": this.state.title,
             "length": this.state.length,
-            "user": decoded.name          
+            "user": name          
         })
       });
 
