@@ -4,7 +4,7 @@
 ## Personal Contributions
 #### - Ella C Qi
  * Design lead
- * User authentification features: user login & user register
+ * User authentication features: user login & user register
  * Files
    * **backend** /
      * config/ keys.js, passport.js
