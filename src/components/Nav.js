@@ -14,7 +14,7 @@ function Nav() {
        <div className="login100-more">
           <div className="logo">
             <Link to="/">
-                  <h1 id="h1">Reaction<span style={logoStyle}>21</span></h1>
+                  <h1 id="h1">REACTion<span style={logoStyle}>21</span></h1>
             </Link>    
             <div id="desc">
                <p>Exercise tracker to keep track of time spent exercising</p>
