@@ -55,18 +55,8 @@ class Login extends Component {
       color: "red"
   };
     return (
-      <div className="limiter">
         <div className="container-login100">
           <div className="wrap-login100">
-
-            {/* <div className="login-logo">
-              <Link to="/">
-                <h1 id="h1">Reaction<span style={logoStyle}>21</span></h1>
-              </Link>    
-              <div id="desc">
-                  <p>Exercise tracker to keep track of time spent exercising</p>
-              </div> 
-            </div> */}
 
             <form className="login100-form validate-form" noValidate onSubmit={this.onSubmit}>
               <span style={{ margin:"2vw auto" }} className="login100-form-title p-b-43">Login to continue</span>
@@ -120,7 +110,6 @@ class Login extends Component {
             </form>
           </div>
         </div>
-      </div>
     );
   }
 }

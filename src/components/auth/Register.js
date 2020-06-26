@@ -53,7 +53,6 @@ class Register extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="limiter">
         <div className="container-login100">
           <div className="wrap-login100">
             {/* <Link to="/" className="btn-flat waves-effect">
@@ -137,7 +136,6 @@ class Register extends Component {
             </form>
           </div>
         </div>
-      </div>
     );
   }
 }
