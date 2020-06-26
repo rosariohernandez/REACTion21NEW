@@ -12,8 +12,7 @@ class Landing extends Component {
               <p className="slogan">Meet A Better You By Setting Up Your</p>
               <p className="slogan">Sports Plan Today</p>
             </div>
-            <br />
-            <div style={{margin:"2vw"}} className="container-login100-form-btn">
+            <div style={{margin:"2vw auto"}} className="container-login100-form-btn">
               <Link
                 to="/register"
                 style={{
@@ -26,7 +25,7 @@ class Landing extends Component {
                 Register
               </Link>
             </div>
-            <div style={{margin:"2vw"}} className="container-login100-form-btn">
+            <div style={{margin:"2vw auto"}} className="container-login100-form-btn">
               <Link
                 to="/login"
                 style={{
