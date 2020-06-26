@@ -35,7 +35,12 @@
   
   $npm run dev | to start back and front end
 
+### Screenshots
+ - index page
 ![welcome](public/welcome.png)
+ - login page
 ![welcome](public/login.png)
+ - register page
 ![welcome](public/register.png)
+ - dashboard page
 ![welcome](public/dash.png)
