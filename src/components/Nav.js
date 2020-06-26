@@ -38,6 +38,9 @@ function Nav() {
             <Link to="/showworkouts">
                <li><div className="linktitle">Show Workouts</div></li>
             </Link>   
+            <Link to="/reports">
+               <li><div className="linktitle">View Reports</div></li>
+            </Link>
             {/* add register and login */} 
             <Link to="/login">
                <li><div className="linktitle">Account</div></li>

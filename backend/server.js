@@ -34,11 +34,13 @@ app.use("/api/users", users);
 const exercisesRoute= require('./routes/exercises');
 const workoutsRoute= require('./routes/workouts');
 const profilesRoute= require('./routes/profiles');
+const reportsRoute= require('./routes/reports');
 const usersRoute= require('./routes/api/users');
 
 
 app.use('/exercises', exercisesRoute);
 app.use('/workouts', workoutsRoute);
+app.use('/reports', reportsRoute);
 app.use('/profiles', profilesRoute);
 app.use('/api/users', usersRoute);
 

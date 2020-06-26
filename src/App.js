@@ -25,6 +25,7 @@ import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 import ShowExercises from './components/ShowExercises';
 import EditWorkout from './components/EditWorkout';
+import CreateReport from './components/CreateReport';
 //add login&register components
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
@@ -63,6 +64,7 @@ function App() {
               <Route path="/showworkouts" exact component={ShowWorkouts} />                    
               <Route path="/createworkout" exact component={CreateWorkout} />   
               <Route path="/editworkout/:id" exact component={EditWorkout} />
+              <Route path="/reports" component={CreateReport} />
               {/* add login&register components */}
               <Route path="/login" exact component={Login} />
               <Route path="/register" exact component={Register} />
