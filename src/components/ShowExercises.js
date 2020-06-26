@@ -33,25 +33,27 @@ async function handleDelete(event){
     }
   return (
     <div className="App">
-<Table striped bordered hover variant="light">
-  <thead className="thead-dark">
-    <tr>      
-      <th>Name</th>
-      <th>Delete</th>
-    </tr>
-  </thead>
+      <div className="custom-table">
+        <h1 id="title">Show Exercises</h1>
+      <Table striped bordered hover variant="light">
+        <thead className="thead-dark">
+          <tr>      
+            <th>Name</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
 
-  <tbody>
-  {exercises.map(item =>(
-    
-    <tr>      
-      <td>{item.title}</td>     
-      <td><button className="btn btn-primary" value={item._id} onClick={handleDelete}>Delete</button></td>     
-    </tr>
-    ))} 
-  </tbody>
-</Table>       
-              
+        <tbody>
+        {exercises.map(item =>(
+          
+          <tr>      
+            <td>{item.title}</td>     
+            <td><button className="btn btn-primary" value={item._id} onClick={handleDelete}>Delete</button></td>     
+          </tr>
+          ))} 
+        </tbody>
+      </Table>       
+      </div>
     </div>
   );
 }

@@ -131,6 +131,9 @@ ul, li {
     font-size: 56px;
    color: whitesmoke;
 }
+#title {
+  margin: 2vw;
+}
 #desc p {
     font-size: 16px;
     color: #979DAC;
@@ -151,7 +154,8 @@ aside
 {
 width:260px;
 height:1000px;
-margin-top: 18vw;
+top: 28%;
+position: fixed;
 }
 aside ul
 {
@@ -188,6 +192,15 @@ aside ul li ::before {
   z-index: 99;
   padding: 15vw;
 }
+/*------------------customize table-----------------*/
+.custom-table {
+  margin-left: 18%;
+  margin-top: 7.5%;
+  margin-right: 3%;
+  margin-bottom: 5%;
+  overflow: auto;
+}
+
 
 aside ul li:first-child{border-top:none;}
 
@@ -222,7 +235,6 @@ aside .linktitle
 line-height: 35px;
 padding-left: 10px;
 }
-
 
 /* Reponsive menu code */
 @media all and (max-width: 600px) {

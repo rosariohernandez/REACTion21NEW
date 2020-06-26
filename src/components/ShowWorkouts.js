@@ -34,6 +34,8 @@ async function handleDelete(event){
     }
   return (
     <div className="App">
+      <div className="custom-table">
+        <h1 id="title">Show Workouts</h1>
 <Table striped bordered hover variant="light">
   <thead className="thead-dark">
     <tr>
@@ -61,7 +63,7 @@ async function handleDelete(event){
   </tbody>
 </Table>
           
-             
+          </div>   
               
     </div>
   );
