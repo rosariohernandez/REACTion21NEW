@@ -16,6 +16,7 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 
 import AddExercise from './components/AddExercise';
 // import ListExercises from './components/ListExercise';
+import CreateProfile from './components/CreateProfile';
 import ShowWorkouts from './components/ShowWorkouts';
 import CreateWorkout from './components/CreateWorkout';
 import Nav from './components/Nav';
@@ -24,6 +25,7 @@ import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 import ShowExercises from './components/ShowExercises';
 import EditWorkout from './components/EditWorkout';
+import CreateReport from './components/CreateReport';
 //add login&register components
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
@@ -55,12 +57,14 @@ function App() {
             <Nav />          
             <Switch>
               {/* <Route path="/" exact component={Home} />     */}
-              <Route path="/" exact component={Landing} />                     
+              <Route path="/" exact component={Landing} />   
+              <Route path="/profiles" exact component={CreateProfile} />          
               <Route path="/exercises" exact component={AddExercise} />
               <Route path="/showexercises" exact component={ShowExercises} />                         
               <Route path="/showworkouts" exact component={ShowWorkouts} />                    
               <Route path="/createworkout" exact component={CreateWorkout} />   
               <Route path="/editworkout/:id" exact component={EditWorkout} />
+              <Route path="/reports" component={CreateReport} />
               {/* add login&register components */}
               <Route path="/login" exact component={Login} />
               <Route path="/register" exact component={Register} />

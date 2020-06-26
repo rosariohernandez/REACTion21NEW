@@ -22,7 +22,10 @@ function Nav() {
           </div> 
 
          <aside> 
-            <ul className="nav-links">          
+            <ul className="nav-links">  
+            <Link to="/profiles">
+               <li><div className="linktitle">Create Profile</div></li>
+            </Link>        
             <Link to="/exercises">
                <li><div className="linktitle">Add Exercise</div></li>
             </Link>
@@ -35,6 +38,9 @@ function Nav() {
             <Link to="/showworkouts">
                <li><div className="linktitle">Show Workouts</div></li>
             </Link>   
+            <Link to="/reports">
+               <li><div className="linktitle">View Reports</div></li>
+            </Link>
             {/* add register and login */} 
             <Link to="/login">
                <li><div className="linktitle">Account</div></li>
