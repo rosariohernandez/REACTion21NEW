@@ -33,7 +33,7 @@ function Nav() {
                <li><div className="linktitle">Manage Exercises</div></li>
             </Link>
             <Link to="/createworkout">
-               <li><div className="linktitle">Enter Workout</div></li>
+               <li><div className="linktitle">Create Workout</div></li>
             </Link>    
             <Link to="/showworkouts">
                <li><div className="linktitle">Show Workouts</div></li>

@@ -60,12 +60,14 @@ class CreateReport extends React.Component {
     render() {
       return (       
         <div className="custom-form">
+          <h1>View Reports</h1>
+          <div className="custom-input"></div>
           <form onSubmit={this.handleSubmit}>
-            <label for="first" >First Date: </label>
-            <input  id="first" type="text" value={this.state.first} onChange={this.handleChangeFirst} required />
+            <label for="first" >From</label>
+            <input className="custom-input-field" id="first" type="text" value={this.state.first} placeholder="First Date" onChange={this.handleChangeFirst} required />
 
-            <label for="second" >Second Date: </label>
-            <input  id="second" type="text" value={this.state.second} onChange={this.handleChangeSecond} required />
+            <label for="second" >To</label>
+            <input className="custom-input-field" id="second" type="text" value={this.state.second} placeholder="Second Date" onChange={this.handleChangeSecond} required />
             
             <div>
                 <input className="btn btn-primary" type="submit" value="Submit" />
