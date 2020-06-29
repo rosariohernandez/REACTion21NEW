@@ -20,11 +20,28 @@ class Dashboard extends Component {
               <h4 style={{fontSize:"35px"}}>
                 <b>Hey there,</b> {user.name.split(" ")[0]}
                 <p className="slogan">
-                  You are logged into REACTion{" "}
-                  <span style={{ fontFamily: "monospace" }}>21</span> app 👏
+                  Welcome to REACTion{" "}
+                  <span style={{ fontFamily: "monospace" }}>21</span> app 
                 </p>
+                <p className="slogan2">To make sure your experience is the best,
+                we need to get to know you a little better. Let's start now!</p>
               </h4>
               <div className="container-login100-form-btn">
+                <button
+                  style={{
+                    width: "300px",
+                    borderRadius: "3px",
+                    letterSpacing: "1.5px",
+                    marginTop: "1rem"
+                  }}
+                  href="/profiles" onClick={this.onClick}
+                  className="login100-form-btn"
+                  >
+                    Create Profile
+                  </button>
+                  
+                </div>
+               <div className="container-login100-form-btn">
                 <button
                   style={{
                     width: "150px",

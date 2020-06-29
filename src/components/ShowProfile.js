@@ -34,6 +34,8 @@ async function handleDelete(event){
     }
   return (
     <div className="App">
+      <div className="custom-table">
+        <h1 id="title">Show Profile</h1>
 <Table striped bordered hover variant="light">
   <thead className="thead-dark">
     <tr>
@@ -44,7 +46,7 @@ async function handleDelete(event){
       <th>City</th>
       <th>Edit</th>
       <th>Delete</th>
-      
+
     </tr>
   </thead>
 
@@ -60,12 +62,12 @@ async function handleDelete(event){
       <td>{item.date.toString().slice(0,10) +" at: " + item.date.toString().slice(11,19) }</td>
       <td><button className="btn btn-primary" value={item._id} onClick={handleDelete}>Delete</button></td>
       <td><button className="btn btn-primary" value={item._id} ><a id="buttonLink" href={'/editprofile/'+item._id}>Edit</a></button></td>
-    </tr>
+      </tr>
     ))} 
   </tbody>
 </Table>
-          
-             
+
+            </div>               
               
     </div>
   );
