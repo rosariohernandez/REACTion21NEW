@@ -25,7 +25,10 @@ function Nav() {
             <ul className="nav-links">  
             <Link to="/profiles">
                <li><div className="linktitle">Create Profile</div></li>
-            </Link>        
+            </Link>    
+            <Link to="/showprofile">
+               <li><div className="linktitle">Manage Profile</div></li>
+            </Link>   
             <Link to="/exercises">
                <li><div className="linktitle">Add Exercise</div></li>
             </Link>
