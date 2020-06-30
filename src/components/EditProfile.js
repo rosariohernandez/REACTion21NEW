@@ -74,8 +74,9 @@ class EditProfile extends React.Component {
       });
 
     //   this.setState({user: ''});     
-    //   this.setState({gender: ''});  
-      window.location.href = "/showprofiles";  
+    //   this.setState({gender: ''}); 
+
+      window.location.href = "/showprofile";  
       
     }
     
