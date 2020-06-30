@@ -188,6 +188,14 @@ aside ul li ::before {
   z-index: -1;
 }
 
+#results {
+  width:auto;
+  height:auto;
+  border: 2px solid #fff;
+  background-color: #fff;
+  color: #000;
+}
+
 /*------------- customize form --------------*/
 .custom-form {
   z-index: 99;
