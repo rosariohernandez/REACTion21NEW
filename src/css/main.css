@@ -238,7 +238,11 @@ aside ul li ::before {
   margin-bottom: 5%;
   overflow: auto;
 }
-
+.scroll-table {
+  overflow: scroll;
+  overflow-y: visible;
+  height: 680px;
+}
 
 aside ul li:first-child{border-top:none;}
 
