@@ -1,20 +1,20 @@
-import React, {ReactDOM} from 'react';
+import React from 'react';
 import jwt_decode from "jwt-decode";
 import '../App.css';
 
 
-// var user="";
+var user="";
 
-// if(localStorage.getItem("jwtToken") != null){
-// var b = localStorage.getItem("jwtToken");
-// //console.log(b);
-// const decoded = jwt_decode(b);
-// //console.log(decoded);
-// user = decoded.name;
-// // console.log(user);
-// }else{
-//   user="No Profile";  
-// }
+if(localStorage.getItem("jwtToken") != null){
+var b = localStorage.getItem("jwtToken");
+//console.log(b);
+const decoded = jwt_decode(b);
+//console.log(decoded);
+user = decoded.name;
+// console.log(user);
+}else{
+  user="No User";  
+}
 
 
 class CreateReport extends React.Component {
@@ -38,22 +38,17 @@ class CreateReport extends React.Component {
         
     }
 
-    // componentDidMount(){
-    //     //alert(user);
-    //   if(localStorage.getItem("jwtToken") == null){
-    //     window.location.replace("/login");
-    //   }
-    // }
+
 
     async handleSubmit(event) {
      
       event.preventDefault();
      
-      const result = await fetch('http://localhost:5000/reports/'+this.state.first+'/'+this.state.second
+      const result = await fetch('http://localhost:5000/reports/'+user+'/'+this.state.first+'/'+this.state.second
       
       );
         const b = await result.json();
-        console.log(b); 
+        // console.log(b); 
         
         for (let i = 0; i < 10; i++) {
           this.setState({

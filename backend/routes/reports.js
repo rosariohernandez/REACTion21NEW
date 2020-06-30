@@ -3,22 +3,15 @@ const router = express.Router();
 const Workout = require('../models/Workout');
 
 // gets back all workouts
-router.get('/:first/:second', async (req,res)=>{
+router.get('/:user/:first/:second', async (req,res)=>{
    try{
-    const workouts = await Workout.find({ date: { $gte: req.params.first, $lte: req.params.second }});
+    const workouts = await Workout.find({user: req.params.user, date: { $gte: req.params.first, $lte: req.params.second }});
     res.json(workouts);
    }catch(err){
     res.json({message: err});
    }
 });
 
-// router.get('/:user-:length', async (req,res)=>{
-//     try{
-//      const workouts = await Workout.find({user:req.params.user, length:req.params.length});
-//      res.json(workouts);
-//     }catch(err){
-//      res.json({message: err});
-//     }
-//  });
+
 
 module.exports = router;

@@ -1,6 +1,21 @@
 import React, {useState, useEffect} from 'react';
 import '../App.css';
 import Table from 'react-bootstrap/Table';
+import jwt_decode from "jwt-decode";
+
+var user="";
+
+if(localStorage.getItem("jwtToken") != null){
+var b = localStorage.getItem("jwtToken");
+//console.log(b);
+const decoded = jwt_decode(b);
+// console.log(decoded);
+user = decoded.name;
+console.log(user);
+
+}else{
+  user="No user";  
+}
 
 
 function ShowWorkouts() {
@@ -28,7 +43,7 @@ async function handleDelete(event){
       if(localStorage.getItem("jwtToken") == null){
         window.location.replace("/login");
       }
-        const data = await fetch('http://localhost:5000/workouts');
+        const data = await fetch('http://localhost:5000/workouts/getby/' + user);
         const exercises = await data.json();        
         setItems(exercises);
     }
