@@ -15,7 +15,7 @@ router.get('/', async (req,res)=>{
 router.get('/getby/:username', async (req,res)=>{
     try{
      const workouts = await Workout.find({user: req.params.username});
-     console.log(workouts);
+    //  console.log(workouts);
      res.json(workouts);
     }catch(err){
      res.json({message: err});

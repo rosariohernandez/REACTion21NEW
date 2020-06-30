@@ -11,7 +11,7 @@ var b = localStorage.getItem("jwtToken");
 const decoded = jwt_decode(b);
 // console.log(decoded);
 user = decoded.name;
-console.log(user);
+// console.log(user);
 
 }else{
   user="No user";  
