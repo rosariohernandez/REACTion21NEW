@@ -83,19 +83,18 @@ class EditProfile extends React.Component {
       
       return (       
         <div className="custom-form">
+          <h1>Edit your profile</h1>
+          <div className="custom-input">
           <form onSubmit={this.handleSubmit}>
+            <input className="custom-input-field"  id="user" type="text"  placeholder="Enter New Name" value={this.state.user}  onChange={this.handleChangeUser} />
+            <input className="custom-input-field" id="gender" type="text" placeholder="Enter New Gender" value={this.state.gender}  onChange={this.handleChangeGender} />
+            <input className="custom-input-field" id="age" type="text" placeholder="Enter New Age" value={this.state.age}  onChange={this.handleChangeAge} />
+            <input className="custom-input-field" id="city" type="text" placeholder="Enter New City" value={this.state.city}  onChange={this.handleChangeCity} /> 
 
-          <label>Profile</label>
-            <input type="text" value={this.state.user}  onChange={this.handleChangeUser} />
-          <label>Gender</label>
-            <input type="text" value={this.state.gender}  onChange={this.handleChangeGender} />
-          <label>Age</label>
-            <input type="text" value={this.state.age}  onChange={this.handleChangeAge} />
-          <label>City</label>
-            <input type="text" value={this.state.city}  onChange={this.handleChangeCity} /> 
-          <input className="btn btn-primary" type="submit" value="Submit" />
-        </form>        
-      </div>
+          <input className="btn btn-primary" type="submit" value="Update" />
+        </form> 
+        </div>       
+        </div>
       );
     }
   }
