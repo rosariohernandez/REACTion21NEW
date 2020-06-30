@@ -189,11 +189,17 @@ aside ul li ::before {
 }
 
 #results {
-  width:auto;
+  margin-top:2em;
+  width:700px;
   height:auto;
-  border: 2px solid #fff;
   background-color: #fff;
   color: #000;
+  text-align:center;
+  margin-left:11.5em;
+}
+
+#results p {
+  font-size:1em;
 }
 
 /*------------- customize form --------------*/
