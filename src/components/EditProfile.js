@@ -22,9 +22,11 @@ class EditProfile extends React.Component {
     }
     
     async componentDidMount() {
-      await fetch('http://localhost:5000/profiles/'+this.props.match.params.id)
+      await fetch('http://localhost:5000/profiles/editprofile/'+this.props.match.params.id)
         .then(response => response.json())
         .then(data => this.setState({ user: data.user, gender:data.gender, age: data.age, city: data.city }));
+    
+        
     }
 
     handleChangeUser(event) {

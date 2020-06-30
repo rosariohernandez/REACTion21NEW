@@ -61,7 +61,7 @@ function App() {
               {/* <Route path="/" exact component={Home} />     */}
               <Route path="/" exact component={Landing} />   
               <Route path="/profiles" exact component={CreateProfile} /> 
-              <Route path="/editprofiles/:id" exact component={EditProfile} /> 
+              <Route path="/profiles/editprofile/:id" exact component={EditProfile} /> 
               <Route path="/showprofile" exact component={ShowProfile} />          
               <Route path="/exercises" exact component={AddExercise} />
               <Route path="/showexercises" exact component={ShowExercises} />                         

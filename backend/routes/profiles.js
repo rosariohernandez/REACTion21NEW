@@ -11,6 +11,16 @@ router.get('/:user', async (req,res)=>{
     res.json({message: err});
    }
 });
+// Edit profile
+router.get('/editprofile/:id', async (req,res)=>{
+    try{
+     const profiles = await Profile.findById(req.params.id);
+     res.json(profiles);
+    }catch(err){
+     res.json({message: err});
+    }
+ });
+
 // Submits the profile
 router.post('/', async (req, res)=>{
     const profile = new Profile({
